@@ -87,7 +87,7 @@ export default function ContactPage() {
                             {/* Display Email */}
                             <div className="mb-6 flex items-start space-x-4">
                                 {/* Bold Email Icon with Aligned Text */}
-                                <AiOutlineMail className="text-3xl font-bold text-black-800 mt-1" /> {/* Bold icon */}
+                                <AiOutlineMail className="text-3xl font-bold text-[#EDE5E1] mt-1" /> {/* Bold icon */}
                                 <div className="text-left">
                                     <Link href="/" className="text-lg text-gray-800 underline">
                                         itglimpse@gmail.com
@@ -98,7 +98,7 @@ export default function ContactPage() {
                             {/* Display Phone Number */}
                             <div className="mb-6 flex items-start space-x-4">
                                 {/* Bold Phone Icon with Aligned Text */}
-                                <AiOutlinePhone className="text-3xl font-bold text-black-800 mt-1" /> {/* Bold icon */}
+                                <AiOutlinePhone className="text-3xl font-bold text-[#EDE5E1] mt-1" /> {/* Bold icon */}
                                 <div className="text-left">
                                     <Link href="/" className="text-lg text-gray-800 underline">
                                         03001234567
@@ -109,7 +109,7 @@ export default function ContactPage() {
                             {/* Display Address with Location Icon */}
                             <div className="mb-6 flex items-start space-x-4">
                                 {/* Bold Location Icon with Aligned Text */}
-                                <AiOutlineEnvironment className="text-3xl font-bold text-black-800 mt-1" /> {/* Location icon */}
+                                <AiOutlineEnvironment className="text-3xl font-bold text-[#EDE5E1] mt-1" /> {/* Location icon */}
                                 <div className="text-left">
                                     <p className="text-gray-800 mt-2">House # 140, Faisal Villas Colony, Faisalabad, Pakistan</p>
                                 </div>
