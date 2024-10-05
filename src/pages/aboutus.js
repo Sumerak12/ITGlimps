@@ -42,7 +42,7 @@ const AboutUs = () => {
       </div>
 
       {/* Third Section */}
-      <div className="w-full flex flex-col mt-7 mb-8 items-center py-16 bg-[#DDD0C8]">
+      <div className="w-full flex flex-col mt-7 mb-8 items-center py-16 bg-[#EDE5E1]">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-[90%]">
           {/* First Column - Images with Random Arrangement */}
           <div className="flex flex-col space-y-4">
@@ -117,7 +117,7 @@ const AboutUs = () => {
         {/* Values Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto">
           {/* Value Card 1 */}
-          <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <div className="mb-4">
               <FaLightbulb className="text-yellow-500 text-6xl transition-all duration-300 hover:scale-110 hover:text-orange-500" /> {/* Innovation Icon with animation */}
             </div>
@@ -128,7 +128,7 @@ const AboutUs = () => {
           </div>
 
           {/* Value Card 2 */}
-          <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <div className="mb-4">
               <FaShieldAlt className="text-blue-500 text-6xl transition-all duration-300 hover:scale-110 hover:text-indigo-500" /> {/* Integrity Icon with animation */}
             </div>
@@ -139,7 +139,7 @@ const AboutUs = () => {
           </div>
 
           {/* Value Card 3 */}
-          <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <div className="mb-4">
               <FaUsers className="text-green-500 text-6xl transition-all duration-300 hover:scale-110 hover:text-teal-500" /> {/* Customer Focus Icon with animation */}
             </div>
@@ -150,7 +150,7 @@ const AboutUs = () => {
           </div>
 
           {/* Value Card 4 */}
-          <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <div className="mb-4">
               <FaHandsHelping className="text-purple-500 text-6xl transition-all duration-300 hover:scale-110 hover:text-pink-500" /> {/* Collaboration Icon with animation */}
             </div>
@@ -161,7 +161,7 @@ const AboutUs = () => {
           </div>
 
           {/* Value Card 5 */}
-          <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <div className="mb-4">
               <FaBalanceScale className="text-pink-500 text-6xl transition-all duration-300 hover:scale-110 hover:text-red-500" /> {/* Fairness Icon with animation */}
             </div>
@@ -172,7 +172,7 @@ const AboutUs = () => {
           </div>
 
           {/* Value Card 6 */}
-          <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+          <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
             <div className="mb-4">
               <FaLeaf className="text-green-600 text-6xl transition-all duration-300 hover:scale-110 hover:text-green-700" /> {/* Sustainability Icon with animation */}
             </div>
@@ -194,7 +194,7 @@ const AboutUs = () => {
       {/* Team Members Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-[90%] mx-auto mt-16 mb-16">
         {/* Team Member 1 */}
-        <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
           {/* Profile Picture */}
           <div className="overflow-hidden rounded-full mb-4 transition-transform duration-300 transform hover:scale-110">
             <img
@@ -226,7 +226,7 @@ const AboutUs = () => {
         </div>
 
         {/* Team Member 2 */}
-        <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
           <div className="overflow-hidden rounded-full mb-4 transition-transform duration-300 transform hover:scale-110">
             <img
               src="/images/ayesha-profile.jpg"
@@ -256,7 +256,7 @@ const AboutUs = () => {
         </div>
 
         {/* Team Member 3 */}
-        <div className="flex flex-col items-center bg-[#DDD0C8] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
+        <div className="flex flex-col items-center bg-[#EDE5E1] p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl">
           <div className="overflow-hidden rounded-full mb-4 transition-transform duration-300 transform hover:scale-110">
             <img
               src="/images/sumaira-profile.jpg"

@@ -42,7 +42,7 @@ const Navbar = () => {
     }, [filteredImages, direction]);
 
     return (
-        <nav className=" bg-[#DDD0C8] text-white shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
+        <nav className=" bg-[#EDE5E1] text-white shadow-md fixed top-0 left-0 w-full z-50 transition-all duration-300">
             <div className="container mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Logo */}
                 <div className="text-[#323232] text-3xl font-bold">

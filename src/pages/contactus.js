@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 import Layout from '@/components/Shared/Layout';
+import { AiOutlineEnvironment, AiOutlinePhone, AiOutlineMail } from 'react-icons/ai';
+import Link from 'next/link';
 
 export default function ContactPage() {
     const [opacity, setOpacity] = useState(1);
@@ -19,14 +21,14 @@ export default function ContactPage() {
 
     return (
         <Layout>
-            <div className="relative min-h-screen bg-gray-100 mt-28">
+            <div className="relative min-h-screen bg-white-100 mt-28">
                 {/* Header Section */}
                 <div
                     className={`relative h-[70vh] flex items-center justify-center transition-opacity duration-700`}
                     style={{ opacity: opacity }}
                 >
                     {/* Gradient Background */}
-                    <div className="absolute inset-0 bg-[#DDD0C8] opacity-80"></div>
+                    <div className="absolute inset-0 bg-[#EDE5E1] opacity-80"></div>
 
                     {/* SVG Pattern Background */}
                     <div className="absolute inset-0">
@@ -73,25 +75,67 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                <div className="container mx-auto py-10 px-5 flex flex-col items-center">
-                    {/* Form Container */}
-                    <div className="w-full max-w-4xl mx-auto px-10 bg-white rounded-lg transition-transform duration-300 transform hover:scale-105">
+                {/* Container for Two Sections (Send a Message Form and Contact Info) */}
+                <div className="flex flex-col lg:flex-row justify-center items-start space-x-0 lg:space-x-10 space-y-10 lg:space-y-0 px-8 md:px-20 mb-10 mt-10"> {/* Adjust spacing and flex direction based on screen size */}
+                    {/* Contact Information Section */}
+                    <div className="w-full lg:w-1/2 flex flex-col items-center justify-center mt-10 lg:mt-10">
+                        <h2 className="text-3xl font-bold text-navy-800 mb-6 text-center">Meet Us</h2>
+                        {/* Contact Info Container */}
+                        <div className="w-full max-w-xl bg-white shadow-lg rounded-lg p-8">
+
+                            {/* Display Email */}
+                            <div className="mb-6 flex items-start space-x-4">
+                                {/* Bold Email Icon with Aligned Text */}
+                                <AiOutlineMail className="text-3xl font-bold text-black-800 mt-1" /> {/* Bold icon */}
+                                <div className="text-left">
+                                    <Link href="/" className="text-lg text-gray-800 underline">
+                                        itglimpse@gmail.com
+                                    </Link>
+                                </div>
+                            </div>
+
+                            {/* Display Phone Number */}
+                            <div className="mb-6 flex items-start space-x-4">
+                                {/* Bold Phone Icon with Aligned Text */}
+                                <AiOutlinePhone className="text-3xl font-bold text-black-800 mt-1" /> {/* Bold icon */}
+                                <div className="text-left">
+                                    <Link href="/" className="text-lg text-gray-800 underline">
+                                        03001234567
+                                    </Link>
+                                </div>
+                            </div>
+
+                            {/* Display Address with Location Icon */}
+                            <div className="mb-6 flex items-start space-x-4">
+                                {/* Bold Location Icon with Aligned Text */}
+                                <AiOutlineEnvironment className="text-3xl font-bold text-black-800 mt-1" /> {/* Location icon */}
+                                <div className="text-left">
+                                    <p className="text-gray-800 mt-2">House # 140, Faisal Villas Colony, Faisalabad, Pakistan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Original Form (Send a Message) */}
+                    <div className="w-full lg:w-1/2 bg-white shadow-lg rounded-lg p-8">
+                        <h2 className="text-3xl font-bold text-[#323232] mb-6 text-center">Send a Message</h2>
+
                         {/* Your Name Field */}
-                        <div className="mb-8 mt-8 ">
-                            <label htmlFor="name" className="block  text-lg font-semibold text-navy-800 mb-3">
+                        <div className="mb-6">
+                            <label htmlFor="name" className="block text-lg font-semibold text-navy-800 mb-3">
                                 Your Name
                             </label>
                             <input
                                 type="text"
                                 id="name"
                                 placeholder="Enter your name"
-                                className="w-full px-5 bg-[#DDD0C8] py-4 text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
+                                className="w-full px-5 py-4 bg-[#EDE5E1] text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
                                 style={{ borderRadius: '30px' }}
                             />
                         </div>
 
                         {/* Your Email Field */}
-                        <div className="mb-8">
+                        <div className="mb-6">
                             <label htmlFor="email" className="block text-lg font-semibold text-navy-800 mb-3">
                                 Your Email
                             </label>
@@ -99,13 +143,13 @@ export default function ContactPage() {
                                 type="email"
                                 id="email"
                                 placeholder="Enter your email"
-                                className="w-full px-5 py-4 bg-[#DDD0C8] text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
+                                className="w-full px-5 py-4 bg-[#EDE5E1] text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
                                 style={{ borderRadius: '30px' }}
                             />
                         </div>
 
                         {/* Your Message Field */}
-                        <div className="mb-8">
+                        <div className="mb-6">
                             <label htmlFor="message" className="block text-lg font-semibold text-navy-800 mb-3">
                                 Your Message
                             </label>
@@ -113,25 +157,23 @@ export default function ContactPage() {
                                 id="message"
                                 placeholder="Write your message"
                                 rows="5"
-                                className="w-full px-5 bg-[#DDD0C8] py-4 text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
+                                className="w-full px-5 py-4 bg-[#EDE5E1] text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
                                 style={{ borderRadius: '30px' }}
                             ></textarea>
                         </div>
 
                         {/* Submit Button */}
-                        <button
-                            type="submit"
-                            className="w-1/4 ml-8 mb-8 py-4 px-6 text-lg font-semibold text-[#323232] bg-[#DDD0C8] rounded-lg shadow-lg hover:bg-[#323232] hover:text-white transition duration-300"
-                            style={{ transition: 'color 0.3s' }} // Optional for smoother transition
-                        >
-                            Send Message
-                        </button>
-
-
-
-
+                        <div className="text-center">
+                            <button
+                                type="submit"
+                                className="py-4 px-8 bg-[#323232] text-white text-lg font-semibold rounded-lg hover:bg-[#EDE5E1] hover:text-[#323232] transition duration-300"
+                            >
+                                Send Message
+                            </button>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </Layout>
     );

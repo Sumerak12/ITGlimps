@@ -20,7 +20,7 @@ export default function Newsletter() {
     };
 
     return (
-        <div className="p-8 bg-[#DDD0C8] rounded-lg shadow-lg mx-4">
+        <div className="p-8 bg-[#EDE5E1] rounded-lg shadow-lg mx-4">
             <h2 className="text-2xl font-bold text-center text-gray-800 mb-4 hover:text-white">
                 Subscribe to the ITGlimpse Newsletter
             </h2>
@@ -56,7 +56,7 @@ export default function Newsletter() {
                 <div className="text-center">
                     <button
                         type="submit"
-                        className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#DDD0C8] hover:text-white transition-colors duration-300 text-xl"
+                        className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#EDE5E1] hover:text-white transition-colors duration-300 text-xl"
                     >
                         Submit
                     </button>

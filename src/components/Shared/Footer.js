@@ -32,7 +32,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={footerRef} className="bg-[#DDD0C8]  text-[#323232] py-10">
+    <footer ref={footerRef} className="bg-[#EDE5E1]  text-[#323232] py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {/* Column 1: Website Title, Summary, and Newsletter */}

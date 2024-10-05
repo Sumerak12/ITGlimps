@@ -7,28 +7,28 @@ const cards = [
     title: 'ARTIFICIAL INTELLIGENCE',
     subtitle: 'Stay Ahead with the Latest in Tech and Innovation',
     imageUrl: '/images/w20.jpg',
-    link: '/categories/ai',
+    link: '/category/ai',
   },
   {
     id: 2,
     title: 'CLOUD COMPUTING',
     subtitle: 'Empowering Businesses with Scalable, On-Demand Digital Solutions',
     imageUrl: '/images/w11.jpg',
-    link: '/categories/cloudcomputing',
+    link: '/category/cloudcomputing',
   },
   {
     id: 3,
     title: 'BLOCKCHAIN',
     subtitle: 'Decentralizing Trust and Transforming Industries with Transparent Technology',
     imageUrl: '/images/w4.jpg',
-    link: '/categories/blockchain',
+    link: '/category/blockchain',
   },
   {
     id: 4,
     title: 'IT',
     subtitle: 'Harnessing Technology to Innovate, Streamline Operations, and Propel Businesses into the Future',
     imageUrl: '/images/image.jpeg',
-    link: '/categories/it',
+    link: '/category/it',
   },
 ];
 

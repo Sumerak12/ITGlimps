@@ -128,7 +128,7 @@ const IT = () => {
                     </div>
                 </div>
                 <div className="flex justify-center mt-8">
-                    <Link href="/load_more" className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#DDD0C8] hover:text-white transition-colors duration-300 text-xl">
+                    <Link href="/load_more" className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#EDE5E1] hover:text-white transition-colors duration-300 text-xl">
                         Load More
                     </Link>
                 </div>

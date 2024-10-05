@@ -40,7 +40,7 @@ export default function TeamRoundCards() {
             </div>
 
             {/* Text Below Round Card */}
-            <div className="text-center mt-6 p-4 bg-[#DDD0C8] rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
+            <div className="text-center mt-6 p-4 bg-[#EDE5E1] rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
               <h3 className="text-gray-900 text-xl font-bold">{member.name}</h3>
               <p className="text-gray-700 text-base italic">{member.role}</p>
             </div>
@@ -51,7 +51,7 @@ export default function TeamRoundCards() {
       {/* Additional Style */}
       <style jsx>{`
         .border-beige {
-          border-color: #f5f5dc; /* Beige color */
+          border-color: #EDE5E1; /* Beige color */
         }
       `}</style>
     </div>
