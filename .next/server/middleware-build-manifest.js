@@ -19,15 +19,15 @@ self.__BUILD_MANIFEST = {
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/aboutus": [
+    "/about-iqra": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/aboutus.js"
+      "static/chunks/pages/about-iqra.js"
     ],
-    "/contactus": [
+    "/category/cloudcomputing": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/contactus.js"
+      "static/chunks/pages/category/cloudcomputing.js"
     ]
   },
   "ampFirstPages": []

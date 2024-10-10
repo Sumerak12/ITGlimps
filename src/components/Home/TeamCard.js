@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const teamMembers = [
   {
@@ -9,7 +10,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: 'Cloud Computing Expert',
+    name: 'Cloud Computing Researcher',
     role: 'Cloud Architect',
     imageUrl: '/images/iqra-profile.jpg',
   },
@@ -29,20 +30,27 @@ export default function TeamRoundCards() {
         {teamMembers.map((member) => (
           <div key={member.id} className="flex flex-col items-center transition-transform transform hover:scale-105 duration-300">
             {/* Round Card Image */}
+
             <div className="relative rounded-full overflow-hidden w-56 h-56 border-4 border-[#DDD0C8] shadow-lg transition-all duration-300 hover:border-gray-900 group">
-              <Image
-                src={member.imageUrl}
-                alt={member.name}
-                fill // Updated from layout="fill"
-                style={{ objectFit: 'cover' }} // Updated from objectFit="cover"
-                className="transition-transform duration-300 group-hover:scale-110"
-              />
+              <Link href="/about-iqra">
+                {/* Use the Link component properly */}
+                  <Image
+                    src={member.imageUrl}
+                    alt={member.name}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                    className="transition-transform duration-300 group-hover:scale-110"
+                  />
+              </Link>
             </div>
 
             {/* Text Below Round Card */}
             <div className="text-center mt-6 p-4 bg-[#EDE5E1] rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
-              <h3 className="text-gray-900 text-xl font-bold">{member.name}</h3>
-              <p className="text-gray-700 text-base italic">{member.role}</p>
+              <Link href="/about-iqra">
+                <h3 className="text-gray-900 text-xl font-bold">{member.name}</h3>
+                <p className="text-gray-700 text-base italic">{member.role}</p>
+              </Link>
+
             </div>
           </div>
         ))}

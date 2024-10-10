@@ -69,13 +69,13 @@ const Cloud_Computing = () => {
                                         bg-white "
                                 >
                                     <div className='g-0 p-8'>
-                                        <a href="#">
+                                        <Link href="/about-iqra">
                                             <img
                                                 className="w-[80px] h-[60px] rounded-full object-cover hover:scale-110 transition-transform duration-500"
                                                 src={prod.profilePhoto}
                                                 alt={`${prod.name}'s profile`}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="mb-4">
                                         <Link

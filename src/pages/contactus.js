@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Layout from '@/components/Shared/Layout';
-import { AiOutlineEnvironment, AiOutlinePhone, AiOutlineMail } from 'react-icons/ai';
+import { AiOutlineEnvironment, AiOutlineMessage, AiOutlinePhone, AiOutlineMail } from 'react-icons/ai';
 import Link from 'next/link';
 
 export default function ContactPage() {
@@ -75,50 +75,9 @@ export default function ContactPage() {
                     </div>
                 </div>
 
-                {/* Container for Two Sections (Send a Message Form and Contact Info) */}
-                <div className="flex flex-col lg:flex-row justify-center items-start space-x-0 lg:space-x-10 space-y-10 lg:space-y-0 px-8 md:px-20 mb-10 mt-10"> {/* Adjust spacing and flex direction based on screen size */}
-                    {/* Contact Information Section */}
-                    <div className="w-full lg:w-1/2 flex flex-col items-center justify-center style={{ marginTop: '4rem' }}"> {/* Increased margin top */}
-                        <h2 className="text-3xl font-bold text-navy-800 mb-6 text-center">Meet Us</h2>
-
-                        {/* Contact Info Container */}
-                        <div className="w-full max-w-xl bg-white shadow-lg rounded-lg p-8">
-
-                            {/* Display Email */}
-                            <div className="mb-6 flex items-start space-x-4">
-                                {/* Bold Email Icon with Aligned Text */}
-                                <AiOutlineMail className="text-3xl font-bold text-[#EDE5E1] mt-1" /> {/* Bold icon */}
-                                <div className="text-left">
-                                    <Link href="/" className="text-lg text-gray-800 underline">
-                                        itglimpse@gmail.com
-                                    </Link>
-                                </div>
-                            </div>
-
-                            {/* Display Phone Number */}
-                            <div className="mb-6 flex items-start space-x-4">
-                                {/* Bold Phone Icon with Aligned Text */}
-                                <AiOutlinePhone className="text-3xl font-bold text-[#EDE5E1] mt-1" /> {/* Bold icon */}
-                                <div className="text-left">
-                                    <Link href="/" className="text-lg text-gray-800 underline">
-                                        03001234567
-                                    </Link>
-                                </div>
-                            </div>
-
-                            {/* Display Address with Location Icon */}
-                            <div className="mb-6 flex items-start space-x-4">
-                                {/* Bold Location Icon with Aligned Text */}
-                                <AiOutlineEnvironment className="text-3xl font-bold text-[#EDE5E1] mt-1" /> {/* Location icon */}
-                                <div className="text-left">
-                                    <p className="text-gray-800 mt-2">House # 140, Faisal Villas Colony, Faisalabad, Pakistan</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Original Form (Send a Message) */}
-                    <div className="w-full lg:w-1/2 bg-white shadow-lg rounded-lg p-8">
+                <div className="flex flex-col justify-center items-start space-y-10 px-8 md:px-20 mb-10 mt-10">
+                    {/* Send a Message Form Section */}
+                    <div className="w-full bg-white shadow-lg rounded-lg p-8 mx-auto max-w-3xl">
                         <h2 className="text-3xl font-bold text-[#323232] mb-6 text-center">Send a Message</h2>
 
                         {/* Your Name Field */}
@@ -162,7 +121,6 @@ export default function ContactPage() {
                                 style={{ borderRadius: '30px' }}
                             ></textarea>
                         </div>
-
                         {/* Submit Button */}
                         <div className="text-center">
                             <button
@@ -173,8 +131,78 @@ export default function ContactPage() {
                             </button>
                         </div>
                     </div>
-                </div>
 
+                    <div className="relative w-full flex flex-col items-center justify-center py-12">
+                        {/* Flower Pattern Background */}
+                        <div className="absolute inset-0">
+                            <svg
+                                viewBox="0 0 200 200"
+                                className="h-full w-full"
+                                preserveAspectRatio="xMidYMid meet"
+                            >
+                                <defs>
+                                    {/* Flower Shape Definition */}
+                                    <path id="flower" d="M10,30 C10,10 30,10 30,30 C30,50 10,50 10,30 Z" fill="rgba(255, 200, 200, 0.3)" />
+                                </defs>
+
+                                {/* Repeating Flower Patterns */}
+                                <use xlinkHref="#flower" x="20" y="10" />
+                                <use xlinkHref="#flower" x="70" y="30" />
+                                <use xlinkHref="#flower" x="30" y="80" />
+                                <use xlinkHref="#flower" x="100" y="50" />
+                                <use xlinkHref="#flower" x="150" y="20" />
+                                <use xlinkHref="#flower" x="80" y="120" />
+                                <use xlinkHref="#flower" x="120" y="140" />
+                                <use xlinkHref="#flower" x="10" y="150" />
+                                <use xlinkHref="#flower" x="60" y="160" />
+                                <use xlinkHref="#flower" x="140" y="100" />
+                            </svg>
+                        </div>
+
+                        {/* Content Section */}
+                        <div className="relative z-10 w-full max-w-6xl px-8">
+                            <h2 className="text-4xl font-bold text-center text-[#323232] mb-12">Contact Us</h2>
+
+                            {/* Flex container for Email, Call, and Chat */}
+                            <div className="flex justify-around items-center space-x-8 bg-[#EDE5E1] shadow-lg rounded-lg p-12">
+                                {/* Email Section */}
+                                <a href="mailto:itglimpse@gmail.com" className="flex flex-col items-center">
+                                    <div className="p-4 border-2 border-[#323232] rounded-full mb-4">
+                                        <AiOutlineMail className="text-4xl text-black" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-2">itglimpse@gmail.com</h3>
+                                    <p className="text-lg text-gray-700 mb-1">Have questions?</p>
+                                    <p className="text-lg text-gray-700">We're here to help you!</p>
+                                </a>
+
+                                {/* Call Section */}
+                                <a href="tel:03001234567" className="flex flex-col items-center">
+                                    <div className="p-4 border-2 border-[#323232] rounded-full mb-4">
+                                        <AiOutlinePhone className="text-4xl text-black" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-2">03001234567</h3>
+                                    <p className="text-gray-600">Monday - Thursday 7:00am - 5:00pm</p>
+                                    <p className="text-gray-600">Friday 7:00am - 1:00pm</p>
+                                </a>
+
+                                {/* Chat Section */}
+                                <a href="javascript:void(0);" className="flex flex-col items-center">
+                                    <div className="p-4 border-2 border-[#323232] rounded-full mb-4">
+                                        <AiOutlineMessage className="text-4xl text-black" />
+                                    </div>
+                                    <h3 className="text-2xl font-bold mb-2">+92 3001234567</h3>
+                                    <p className="text-gray-600">Monday - Thursday 7:00am - 5:00pm</p>
+                                    <p className="text-gray-600">Friday 7:00am - 1:00pm</p>
+                                </a>
+                            </div>
+
+                            {/* Decorative Border or Wave at the Bottom */}
+                            <div className="mt-12">
+                                <div className="h-20 bg-gradient-to-t from-gray-200 to-transparent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </Layout>
     );
