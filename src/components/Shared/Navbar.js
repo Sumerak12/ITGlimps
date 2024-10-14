@@ -3,6 +3,7 @@ import { FaSearch, FaSignInAlt } from 'react-icons/fa';
 import Link from 'next/link';
 
 const Navbar = () => {
+    const [showSearch, setShowSearch] = useState(false);
     const images = [
         { src: '/images/cloudcomputing.webp', label: 'Cloud Computing' },
         { src: '/images/blockchain.webp', label: 'Blockchain' },
@@ -55,8 +56,7 @@ const Navbar = () => {
                         <li key={item} className="relative group">
                             <Link
                                 href={item === 'Home' ? '/' : `/${item.toLowerCase().replace(/\s+/g, '')}`}
-                                className="relative transition duration-300 transform hover:scale-105"
-                            >
+                                className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500">
                                 <span className="hover:text-white transition duration-300">{item}</span>
                                 <span className="absolute left-0 bottom-0 h-[2px] bg-[#DDD0C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                             </Link>
@@ -109,7 +109,7 @@ const Navbar = () => {
                     <li className="relative group">
                         <Link
                             href="/aboutus"
-                            className="relative transition duration-300 transform hover:scale-105"
+                            className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500"
                         >
                             <span className="hover:text-white transition duration-300">About Us</span>
                             <span className="absolute left-0 bottom-0 h-[2px] bg-[#DDD0C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -118,7 +118,7 @@ const Navbar = () => {
                     <li className="relative group">
                         <Link
                             href="/contactus"
-                            className="relative transition duration-300 transform hover:scale-105"
+                          className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500"
                         >
                             <span className="hover:text-white transition duration-300">Contact Us</span>
                             <span className="absolute left-0 bottom-0 h-[2px] bg-[#DDD0C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -129,7 +129,7 @@ const Navbar = () => {
                     <li className="relative group">
                         <Link
                             href="/blog"
-                            className="relative transition duration-300 transform hover:scale-105"
+                         className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500"
                         >
                             <span className="hover:text-white transition duration-300">Blog</span>
                             <span className="absolute left-0 bottom-0 h-[2px] bg-[#DDD0C8] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
@@ -139,9 +139,28 @@ const Navbar = () => {
 
                 {/* Search and Login Icons */}
                 <div className="flex items-center space-x-6">
-                    <Link href="/search" className="text-[#323232] hover:text-white transition duration-300 transform hover:scale-110">
-                        <FaSearch size={20} />
-                    </Link>
+                <button
+              onClick={() => setShowSearch(!showSearch)}
+              className="text-[#323232] hover:text-white transition-transform duration-300"
+            >
+              <FaSearch size={24} />
+            </button>
+
+            {/* Conditional Search Field */}
+            {showSearch && (
+              <div className="absolute right-6 mt-[90px] w-[300px] z-50">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full px-4 py-2 bg-white border border-[#323232] rounded-full shadow-md focus:outline-none focus:ring focus:border-[#DDD0C8] text-sm font-serif transition-all duration-500 ease-in-out"
+                  style={{
+                    fontFamily: 'Georgia, serif',
+                    fontSize: '16px',
+                    color: '#323232',
+                  }}
+                />
+                </div>
+                  )}
                     <Link href="/login" className="text-[#323232] hover:text-white transition duration-300 transform hover:scale-110">
                         <FaSignInAlt size={20} />
                     </Link>
@@ -174,79 +193,105 @@ const Navbar = () => {
             </div>
 
             {/* Custom Styles */}
-            <style jsx global>{`
-                .text-[#323232] {
-                    color: #323232; /* dark-gray */
-                }
-                .hover\:text-[#323232]:hover {
-                    color: white; /* Gold */
-                }
-                nav {
-                    animation: fadeIn 0.5s ease-in-out;
-                }
+                {/* Custom Styles */}
+      <style jsx global>{`
+    .text-[#323232] {
+      color: #323232; /* dark-gray */
+    }
+    .hover\:text-[#323232]:hover {
+      color: white; /* Gold */
+    }
+    nav {
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-                @keyframes fadeIn {
-                    from {
-                        opacity: 0;
-                        transform: translateY(-20px);
-                    }
-                    to {
-                        opacity: 1;
-                        transform: translateY(0);
-                    }
-                }
+    /* Enhanced Underline Animation */
+    @keyframes underline {
+      0% {
+        transform: scaleX(0);
+      }
+      50% {
+        transform: scaleX(1.1);
+      }
+      100% {
+        transform: scaleX(1);
+      }
+    }
 
-                /* Enhanced Underline Animation */
-                @keyframes underline {
-                    0% {
-                        transform: scaleX(0);
-                    }
-                    50% {
-                        transform: scaleX(1.1);
-                    }
-                    100% {
-                        transform: scaleX(1);
-                    }
-                }
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
 
-                @keyframes slide {
-                    0% {
-                        transform: translateX(0);
-                    }
-                    100% {
-                        transform: translateX(-100%);
-                    }
-                }
+    @keyframes fadeInOut {
+      0%,
+      100% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
 
-                @keyframes fadeInOut {
-                    0%, 100% {
-                        opacity: 0;
-                    }
-                    50% {
-                        opacity: 1;
-                    }
-                }
+    .continuous-slide {
+      animation: slide 20s linear infinite;
+    }
 
-                .continuous-slide {
-                    animation: slide 20s linear infinite;
-                }
+    .animate-slide-text {
+      animation: fadeInOut 5s ease-in-out infinite;
+    }
 
-                .animate-slide-text {
-                    animation: fadeInOut 5s ease-in-out infinite;
-                }
+    .absolute {
+      transition: transform 0.3s ease;
+    }
+.search-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
 
-                .absolute {
-                    transition: transform 0.3s ease;
-                }
+        input {
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-                /* Border Surround */
-                .group:hover > a {
-                    border: 2px solid #323232; /* Gold */
-                    border-radius: 4px;
-                    padding: 4px; /* Adjust padding for border */
-                    transition: border 0.3s ease;
-                }
-            `}</style>
+        input:focus {
+          border-color: #DDD0C8; /* Subtle brown/gold border for focus */
+        }
+
+        input::placeholder {
+          color: #a1a1a1;
+          font-style: italic;
+        }
+    /* Categories Specific Styles */
+    .group:hover > span {
+      color: white; /* Change text color on hover */
+    }
+
+    .group:hover > div {
+      border: 2px solid #323232; /* Dark gray border on hover */
+      border-radius: 4px;
+      padding: 4px; /* Adjust padding for border */
+      transition: border 0.3s ease;
+    }
+
+    #menu-btn:focus + #mobile-menu {
+      display: block;
+    }
+  `}</style>
         </nav>
     );
 };
