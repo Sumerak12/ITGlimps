@@ -3,6 +3,8 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
-  "/contactus": "pages/contactus.js",
-  "/category/ai": "pages/category/ai.js"
+  "/aboutus": "pages/aboutus.js",
+  "/blog": "pages/blog.js",
+  "/category/cloudcomputing": "pages/category/cloudcomputing.js",
+  "/about-iqra": "pages/about-iqra.js"
 }

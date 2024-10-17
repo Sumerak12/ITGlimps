@@ -56,6 +56,7 @@ export default function ModernHeroSection() {
           {displayText}
         </h1>
       </div>
+   
     </div>
   );
 }  
