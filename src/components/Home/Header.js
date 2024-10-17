@@ -2,6 +2,7 @@ import { FaSearch, FaSignInAlt } from 'react-icons/fa'; // Importing icons from 
 import React, { useState, useEffect } from 'react'; // Import React and useState
 
 export default function Header() {
+  const [showSearch, setShowSearch] = useState(false);
   const images = [
     { src: '/images/cloudcomputing.webp', label: 'Cloud Computing' },
     { src: '/images/blockchain.webp', label: 'Blockchain' },
@@ -40,12 +41,12 @@ export default function Header() {
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, [filteredImages, direction]);
   return (
-    <header className="relative bg-[#EDE5E1] shadow-lg">
+    <header className="relative bg-white shadow-lg">
       {/* Container for Header Content */}
       <div className="max-w-7xl mx-auto flex flex-col items-center px-6 py-6">
         {/* Brand Name Centered */}
-        <h1 className="text-5xl font-serif text-[#323232] hover:text-white transition duration-300 mb-4">
-          ITGlimps
+        <h1 className="text-5xl font-serif text-black transition duration-300 mb-4 hover:scale-105 ">
+          ITFlare
         </h1>
         {/* Navigation Links and Icons */}
         <nav className="w-full flex items-center justify-between">
@@ -54,7 +55,7 @@ export default function Header() {
             <li>
               <a
                 href="/"
-                className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500"
+                className="relative inline-block transition duration-300 transform before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500 hover:scale-105"
               >
                 Home
               </a>
@@ -62,41 +63,25 @@ export default function Header() {
             <li>
               <a
                 href="/blog"
-                className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500"
+                className="relative inline-block transition duration-300 transform before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500 hover:scale-105"
               >
                 Blog
               </a>
             </li>
-            <li>
-              <a
-                href="/aboutus"
-                className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500"
-              >
-                About Us
-              </a>
-            </li>
-            <li>
-              <a
-                href="/contactus"
-                className="relative hover:text-white transition duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500"
-              >
-                Contact Us
-              </a>
-            </li>
             {/* Categories Link */}
             <li className="relative group">
-              <span className="hover:text-white transition duration-300 cursor-pointer">
+              <span className="hover:text-black transition duration-300 cursor-pointer">
                 Categories
               </span>
 
               {/* Slider Section */}
-              <div className="absolute left-0 hidden group-hover:block mt-2 w-[600px] bg-[#DDD0C8] border border-[#323232] rounded-lg shadow-lg z-10 p-2 transition-transform duration-300 transform scale-95 group-hover:scale-100">
+              <div className="absolute left-0 hidden group-hover:block mt-2 w-[600px] bg-white border border-[#323232] rounded-lg shadow-lg z-10 p-2 transition-transform duration-300 transform scale-95 group-hover:scale-100">
                 {/* Small Navbar inside the slider */}
-                <nav className="flex space-x-1.5 mb-2 text-[#323232] text-xs">
+                <nav className="flex space-x-1.5 mb-2 text-black text-xs">
                   {categories.map((category, index) => (
                     <button
                       key={index}
-                      className={`px-2 py-1 hover:text-white transition ${selectedCategory === category ? 'font-bold underline' : ''
+                      className={`px-2 py-1 hover:text-black transition ${selectedCategory === category ? 'font-bold underline' : ''
                         }`}
                       onClick={() => setSelectedCategory(category)}
                     >
@@ -117,7 +102,7 @@ export default function Header() {
                         />
                         {/* Text Overlay */}
                         <div className="absolute inset-0 flex items-center justify-center">
-                          <p className="text-white text-sm font-bold animate-slide-text">
+                          <p className="text-black text-sm font-bold animate-slide-text">
                             {image.label}
                           </p>
                         </div>
@@ -127,16 +112,55 @@ export default function Header() {
                 </div>
               </div>
             </li>
+
+            <li>
+              <a
+                href="/aboutus"
+                className="relative inline-block transition duration-300 transform before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500 hover:scale-105"
+              >
+                About Us
+              </a>
+            </li>
+            <li>
+              <a
+                href="/contactus"
+                className="relative inline-block transition duration-300 transform before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-full before:transition-all before:duration-500 hover:scale-105"
+              >
+                Contact Us
+              </a>
+            </li>
           </ul>
 
           {/* Icons on the right */}
           <div className="flex space-x-6">
-            <a href="/search" className="text-[#323232] hover:text-white transition-transform duration-300">
+            <button
+              onClick={() => setShowSearch(!showSearch)}
+              className="relative inline-block transition duration-300 transform before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-0 before:transition-all before:duration-500 hover:scale-105 no-underline">
               <FaSearch size={24} />
-            </a>
-            <a href="/login" className="text-[#323232] hover:text-white transition-transform duration-300">
+            </button>
+
+            {/* Conditional Search Field */}
+            {showSearch && (
+              <div className="absolute right-3 mt-10 w-[300px] z-50">
+                <input
+                  type="text"
+                  placeholder="Search..."
+                  className="w-full px-4 py-2 bg-white border border-[#323232] rounded-full shadow-md focus:outline-none focus:ring focus:border-[#C89F72] text-sm font-serif transition-all duration-500 ease-in-out"
+                  style={{
+                    fontFamily: 'Georgia, serif',
+                    fontSize: '16px',
+                    color: '#323232',
+                  }}
+                />
+              </div>
+            )}
+            <a
+              href="/login"
+              className="relative inline-block transition duration-300 transform before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#323232] hover:before:w-0 before:transition-all before:duration-500 hover:scale-105 no-underline"
+            >
               <FaSignInAlt size={24} />
             </a>
+
           </div>
         </nav>
 
@@ -207,6 +231,24 @@ export default function Header() {
     .absolute {
       transition: transform 0.3s ease;
     }
+      .search-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        input {
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        input:focus {
+          border-color: #C89F72; /* Subtle brown/gold border for focus */
+        }
+
+        input::placeholder {
+          color: #a1a1a1;
+          font-style: italic;
+        }
 
     /* Categories Specific Styles */
     .group:hover > span {

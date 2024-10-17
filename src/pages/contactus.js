@@ -28,7 +28,7 @@ export default function ContactPage() {
                     style={{ opacity: opacity }}
                 >
                     {/* Gradient Background */}
-                    <div className="absolute inset-0 bg-[#EDE5E1] opacity-80"></div>
+                    <div className="absolute inset-0 bg-white opacity-80"></div>
 
                     {/* SVG Pattern Background */}
                     <div className="absolute inset-0">
@@ -70,7 +70,7 @@ export default function ContactPage() {
                     </div>
 
                     <div className="text-center z-10 text-white">
-                        <h1 className="text-6xl text-[#323232] font-extrabold tracking-wider animate-fade-in">Contact Me</h1>
+                        <h1 className="text-6xl text-[#323232] font-extrabold tracking-wider animate-fade-in">Contact Us</h1>
                         <p className="text-2xl text-[#323232] mt-4 animate-fade-in">Let’s Get in Touch</p>
                     </div>
                 </div>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                                 type="text"
                                 id="name"
                                 placeholder="Enter your name"
-                                className="w-full px-5 py-4 bg-[#EDE5E1] text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
+                                className="w-full px-5 py-4 bg-white text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
                                 style={{ borderRadius: '30px' }}
                             />
                         </div>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                                 type="email"
                                 id="email"
                                 placeholder="Enter your email"
-                                className="w-full px-5 py-4 bg-[#EDE5E1] text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
+                                className="w-full px-5 py-4 bg-white text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
                                 style={{ borderRadius: '30px' }}
                             />
                         </div>
@@ -117,7 +117,7 @@ export default function ContactPage() {
                                 id="message"
                                 placeholder="Write your message"
                                 rows="5"
-                                className="w-full px-5 py-4 bg-[#EDE5E1] text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
+                                className="w-full px-5 py-4 bg-white text-gray-900 rounded-lg border border-gray-300 focus:ring-teal-600 focus:border-teal-600 transition duration-300 shadow-md"
                                 style={{ borderRadius: '30px' }}
                             ></textarea>
                         </div>
@@ -125,7 +125,7 @@ export default function ContactPage() {
                         <div className="text-center">
                             <button
                                 type="submit"
-                                className="py-4 px-8 bg-[#323232] text-white text-lg font-semibold rounded-lg hover:bg-[#EDE5E1] hover:text-[#323232] transition duration-300"
+                                className="py-4 px-8 bg-black text-white text-lg font-semibold rounded-lg hover:bg-black hover:text-white transition duration-300"
                             >
                                 Send Message
                             </button>
@@ -142,7 +142,7 @@ export default function ContactPage() {
                             >
                                 <defs>
                                     {/* Flower Shape Definition */}
-                                    <path id="flower" d="M10,30 C10,10 30,10 30,30 C30,50 10,50 10,30 Z" fill="rgba(255, 200, 200, 0.3)" />
+                                    <path id="flower" d="M10,30 C10,10 30,10 30,30 C30,50 10,50 10,30 Z" fill="bg-black" />
                                 </defs>
 
                                 {/* Repeating Flower Patterns */}
@@ -161,17 +161,17 @@ export default function ContactPage() {
 
                         {/* Content Section */}
                         <div className="relative z-10 w-full max-w-6xl px-8">
-                            <h2 className="text-4xl font-bold text-center text-[#323232] mb-12">Contact Us</h2>
+                            <h2 className="text-4xl font-bold text-center text-black mb-12">Contact Us</h2>
 
                             {/* Flex container for Email, Call, and Chat */}
-                            <div className="flex justify-around items-center space-x-8 bg-[#EDE5E1] shadow-lg rounded-lg p-12">
+                            <div className="flex justify-around items-center space-x-8 bg-white shadow-lg rounded-lg p-12">
                                 {/* Email Section */}
                                 <a href="mailto:itglimpse@gmail.com" className="flex flex-col items-center">
                                     <div className="p-4 border-2 border-[#323232] rounded-full mb-4">
                                         <AiOutlineMail className="text-4xl text-black" />
                                     </div>
                                     <h3 className="text-2xl font-bold mb-2">itglimpse@gmail.com</h3>
-                                    <p className="text-lg text-gray-700 mb-1">Have questions?</p>
+                                    <p className="text-lg text-gray-700 mb-1">Have questions or suggestions?</p>
                                     <p className="text-lg text-gray-700">We're here to help you!</p>
                                 </a>
 

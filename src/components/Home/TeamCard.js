@@ -25,13 +25,13 @@ const teamMembers = [
 export default function TeamRoundCards() {
   return (
     <div className="container mx-auto py-12">
-      <h2 className="text-4xl font-bold text-center mb-10 text-gray-900">Meet Our Team</h2>
+      <h2 className="text-4xl font-bold text-center mb-10 text-black">Meet Our Team</h2>
       <div className="flex flex-wrap justify-center gap-10">
         {teamMembers.map((member) => (
           <div key={member.id} className="flex flex-col items-center transition-transform transform hover:scale-105 duration-300">
             {/* Round Card Image */}
 
-            <div className="relative rounded-full overflow-hidden w-56 h-56 border-4 border-[#DDD0C8] shadow-lg transition-all duration-300 hover:border-gray-900 group">
+            <div className="relative rounded-full overflow-hidden w-56 h-56 border-4 border-black shadow-lg transition-all duration-300  group">
               <Link href="/about-iqra">
                 {/* Use the Link component properly */}
                   <Image
@@ -39,13 +39,13 @@ export default function TeamRoundCards() {
                     alt={member.name}
                     fill
                     style={{ objectFit: 'cover' }}
-                    className="transition-transform duration-300 group-hover:scale-110"
+                    className="transition-transform duration-300 group-hover:scale-110 "
                   />
               </Link>
             </div>
 
             {/* Text Below Round Card */}
-            <div className="text-center mt-6 p-4 bg-[#EDE5E1] rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
+            <div className="text-center mt-6 p-4 bg-white rounded-lg shadow-md transition-shadow duration-300 hover:shadow-xl">
               <Link href="/about-iqra">
                 <h3 className="text-gray-900 text-xl font-bold">{member.name}</h3>
                 <p className="text-gray-700 text-base italic">{member.role}</p>

@@ -58,7 +58,7 @@ const Cloud_Computing = () => {
     return (
         <Layout>
             {/* New Section for Profile, About, and Contact */}
-            <div className="bg-gradient-to-r from-[#EDE5E1] to-[#f5e3d4] py-16 mt-28 text-gray-800">
+            <div className="relative bg-white shadow-lg py-16 mt-28 text-gray-800">
                 <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-x-10">
                     {/* Profile Picture Section */}
                     <div className="flex-shrink-0 mt-6 relative rounded-full overflow-hidden border-4 border-[#DDD0C8] shadow-lg transition-all duration-300 hover:border-gray-900 group"> {/* Added padding */}
@@ -71,15 +71,15 @@ const Cloud_Computing = () => {
 
                     {/* About Section - Centered */}
                     <div className="flex-grow text-center md:text-left">
-                        <h3 className="text-[#8b5e34] uppercase tracking-wider text-md mb-2">Author</h3>
-                        <h2 className="text-[#2d2d2d] text-4xl font-bold mb-4 tracking-wide">Iqra Arshad</h2>
-                        <p className="text-gray-700 text-lg leading-relaxed">
+                        <h3 className="text-blue-400 uppercase tracking-wider text-md mb-2">Author</h3>
+                        <h2 className="text-blackk text-4xl font-bold mb-4 tracking-wide">Iqra Arshad</h2>
+                        <p className="text-black text-lg leading-relaxed">
                             Iqra Arshad is a Cloud Computing Researcher and Blogger, passionate about exploring cloud technologies, including scalable infrastructures and security. Through her blog, she shares insights on emerging trends and innovative solutions, helping both tech enthusiasts and professionals stay informed about the evolving cloud landscape.</p>
                     </div>
 
                     {/* Social Links Section */}
                     <div className="flex-shrink-0 text-center md:text-right">
-                        <h4 className="text-[#8b5e34] uppercase tracking-wider text-md mb-4">Find Iqra Elsewhere:</h4>
+                        <h4 className="text-blue-400 uppercase tracking-wider text-md mb-4">Find Iqra Elsewhere:</h4>
                         <ul className="space-y-4 flex flex-col items-center">
                             {/* LinkedIn */}
                             <li>
@@ -87,7 +87,7 @@ const Cloud_Computing = () => {
                                     href="https://www.linkedin.com/in/your-profile"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#2d2d2d] hover:text-blue-600 transition-colors duration-300"
+                                    className="transform transition-transform duration-300 hover:scale-125 hover:text-black"
                                 >
                                     <FaLinkedin className="text-4xl" />
                                 </a>
@@ -97,7 +97,7 @@ const Cloud_Computing = () => {
                             <li>
                                 <a
                                     href="mailto:iqra@gmail.com"
-                                    className="text-[#2d2d2d] hover:text-red-600 transition-colors duration-300"
+                                    className="transform transition-transform duration-300 hover:scale-125 hover:text-black"
                                 >
                                     <FaEnvelope className="text-4xl" />
                                 </a>
@@ -109,7 +109,7 @@ const Cloud_Computing = () => {
                                     href="https://twitter.com/your-profile"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[#2d2d2d] hover:text-blue-400 transition-colors duration-300"
+                                    className="transform transition-transform duration-300 hover:scale-125 hover:text-black"
                                 >
                                     <FaTwitter className="text-4xl" />
                                 </a>
@@ -122,7 +122,7 @@ const Cloud_Computing = () => {
 
             {/* Main Content Section */}
             <div className="container m-12">
-                <div className="row flex mt-22">
+                <div className="row flex mt-28">
                     <div className="flex w-4/5">
                         <div className="flex w-full flex-wrap justify-between justify-center">
                             {data.map((prod) => (
@@ -133,43 +133,43 @@ const Cloud_Computing = () => {
                                         bg-white "
                                 >
                                     <div className='g-0 p-8'>
-                                        <a href="#">  {/* Updated link to about-iqra page */}
+                                        <Link href="/about-iqra">
                                             <img
                                                 className="w-[80px] h-[60px] rounded-full object-cover hover:scale-110 transition-transform duration-500"
                                                 src={prod.profilePhoto}
                                                 alt={`${prod.name}'s profile`}
                                             />
-                                        </a>
+                                        </Link>
                                     </div>
                                     <div className="mb-4">
                                         <Link
-                                            className="mb-5 text-2xl hover:text-green-700 font-bold tracking-tight text-rose-700 dark:text-white"
+                                            className="mb-5 text-2xl font-bold tracking-tight text-blue-400 dark:text-white"
                                             href="">
                                             {prod.name}
                                         </Link>
                                         <Link href={prod.link1}>
-                                            <h1 className="mb-2 text-2xl hover:text-violet-400 font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h1 className="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
                                                 {prod.title1}
                                             </h1>
                                         </Link>
-                                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                        <p className="mb-3 font-normal text-black dark:text-gray-400">
                                             {prod.description1}
                                         </p>
                                         <Link
-                                            className='text-sky-500 hover:text-fuchsia-950 font-bold text-lg'
+                                            className='text-blue-400 font-bold text-lg'
                                             href={prod.link1}>
                                             Read More...
                                         </Link>
-                                        <div className='flex flex-row justify-center items-center space-x-8 bg-white p-4 mt-8'>
+                                        <div className='flex flex-row justify-center items-center space-x-8 bg-white p-4 mt-8 hover:shadow-xl transition duration-300'>
                                             <div className='flex items-center space-x-2'>
-                                                <FaBookOpen className='text-rose-700 dark:text-gray-300' />
-                                                <span className='font-medium text-lg text-rose-700 dark:text-gray-300'>
+                                                <FaBookOpen className='text-black dark:text-gray-300' />
+                                                <span className='font-medium text-lg text-black dark:text-gray-300'>
                                                     {prod.reading_time}
                                                 </span>
                                             </div>
                                             <div className='flex items-center space-x-2'>
-                                                <FaCommentAlt className='text-violet-700 dark:text-gray-300' />
-                                                <span className='font-medium text-lg text-violet-700 dark:text-gray-300'>
+                                                <FaCommentAlt className='text-black dark:text-gray-300' />
+                                                <span className='font-medium text-lg text-black dark:text-gray-300'>
                                                     0 comments
                                                 </span>
                                             </div>
@@ -181,9 +181,8 @@ const Cloud_Computing = () => {
                         </div>
                     </div>
                 </div>
-
                 <div className="flex justify-center mt-8">
-                    <Link href="/load_more" className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#EDE5E1] hover:text-white transition-colors duration-300 text-xl">
+                    <Link href="/load_more" className="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:scale-105 transition-colors duration-300 text-xl">
                         Load More
                     </Link>
                 </div>

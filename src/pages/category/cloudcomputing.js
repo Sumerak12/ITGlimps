@@ -79,33 +79,33 @@ const Cloud_Computing = () => {
                                     </div>
                                     <div className="mb-4">
                                         <Link
-                                            className="mb-5 text-2xl hover:text-green-700 font-bold tracking-tight text-rose-700 dark:text-white"
+                                            className="mb-5 text-2xl font-bold tracking-tight text-blue-400 dark:text-white"
                                             href="">
                                             {prod.name}
                                         </Link>
                                         <Link href={prod.link1}>
-                                            <h1 className="mb-2 text-2xl hover:text-violet-400 font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h1 className="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
                                                 {prod.title1}
                                             </h1>
                                         </Link>
-                                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                        <p className="mb-3 font-normal text-black dark:text-gray-400">
                                             {prod.description1}
                                         </p>
                                         <Link
-                                            className='text-sky-500 hover:text-fuchsia-950 font-bold text-lg'
+                                            className='text-blue-400 font-bold text-lg'
                                             href={prod.link1}>
                                             Read More...
                                         </Link>
-                                        <div className='flex flex-row justify-center items-center space-x-8 bg-white p-4 mt-8'>
+                                        <div className='flex flex-row justify-center items-center space-x-8 bg-white p-4 mt-8 hover:shadow-xl transition duration-300'>
                                             <div className='flex items-center space-x-2'>
-                                                <FaBookOpen className='text-rose-700 dark:text-gray-300' />
-                                                <span className='font-medium text-lg text-rose-700 dark:text-gray-300'>
+                                                <FaBookOpen className='text-black dark:text-gray-300' />
+                                                <span className='font-medium text-lg text-black dark:text-gray-300'>
                                                     {prod.reading_time}
                                                 </span>
                                             </div>
                                             <div className='flex items-center space-x-2'>
-                                                <FaCommentAlt className='text-violet-700 dark:text-gray-300' />
-                                                <span className='font-medium text-lg text-violet-700 dark:text-gray-300'>
+                                                <FaCommentAlt className='text-black dark:text-gray-300' />
+                                                <span className='font-medium text-lg text-black dark:text-gray-300'>
                                                     0 comments
                                                 </span>
                                             </div>
@@ -118,7 +118,7 @@ const Cloud_Computing = () => {
                     </div>
                 </div>
                 <div className="flex justify-center mt-8">
-                    <Link href="/load_more" className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#EDE5E1] hover:text-white transition-colors duration-300 text-xl">
+                    <Link href="/load_more" className="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:scale-105 transition-colors duration-300 text-xl">
                         Load More
                     </Link>
                 </div>

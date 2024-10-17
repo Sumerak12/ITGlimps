@@ -4,5 +4,7 @@
   "/_document": "pages/_document.js",
   "/": "pages/index.js",
   "/about-iqra": "pages/about-iqra.js",
-  "/category/cloudcomputing": "pages/category/cloudcomputing.js"
+  "/blog": "pages/blog.js",
+  "/aboutus": "pages/aboutus.js",
+  "/contactus": "pages/contactus.js"
 }
