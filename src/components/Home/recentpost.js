@@ -49,7 +49,7 @@ const Blogpost = [
 export default function RecentPost() {
   return (
     <div className="container mx-auto py-12">
-      <h1 className="text-4xl font-bold text-center text-[#323232] mb-10">Latest Blog Posts</h1>
+      <h1 className="text-4xl font-bold text-center text-[#323232] mb-10">Trending Blogs</h1>
 
       {/* Grid layout for the blog cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -78,11 +78,11 @@ export default function RecentPost() {
               {/* Category links */}
               <div className="flex space-x-2">
                 {card.categories.map((category, index) => (
-                  <span key={index} className="text-gray-600 text-sm">
-                    <Link href={category.link} className="flex items-center hover:text-yellow-500 transition-colors duration-300">
+                  <span key={index} className="text-blue-600 text-sm">
+                    <Link href={category.link} className="flex items-center hover:text-blue-500 transition-colors duration-300">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        className="h-4 w-4 mr-1 text-yellow-500"
+                        className="h-4 w-4 mr-1 text-blue-500"
                         viewBox="0 0 20 20"
                         fill="currentColor"
                       >
@@ -100,7 +100,7 @@ export default function RecentPost() {
 
       {/* Load More Button */}
       <div className="flex justify-center mt-8">
-        <Link href="/load_more" className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#EDE5E1] hover:text-white transition-colors duration-300 text-xl">
+        <Link href="/load_more" className="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:scale-105 transition-colors duration-300 text-xl">
           Load More
         </Link>
       </div>

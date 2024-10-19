@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaCommentAlt, FaBookOpen } from 'react-icons/fa';
 import Layout from '@/components/Shared/Layout';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const data = [
@@ -55,54 +56,64 @@ const data = [
 ];
 
 const Blog = () => {
+    const [comments, setComments] = useState([]);
+
+    // Simulating comments count or other dynamic content on the client side
+    useEffect(() => {
+        // Fetch comments count or any client-side dynamic data if necessary
+        setComments(Array(data.length).fill(0)); // For example, setting 0 comments for now
+    }, []);
+
     return (
         <Layout>
             <div className="container m-12">
                 <div className="row flex mt-28">
                     <div className='flex w-4/5 '>
-                        <div className="flex w-full flex-wrap   justify-between justify-center">
-                            {data.map((prod) => (
+                        <div className="flex w-full flex-wrap justify-between justify-center">
+                            {data.map((prod, index) => (
                                 <div
-                                    key={prod.title1}
+                                    key={index}
                                     className="w-full mb-4 sm:w-1/2 md:w-1/3 m-4 p-4 flex lg:w-full justify-between
-                                        transform transition-all duration-300 hover:shadow-lg hover:shadow-fuchsia-500/50 hover:-translate-y-1 
+                                        transform transition-all duration-300 hover:shadow-lg hover:shadow-gray-500/50 hover:-translate-y-1 
                                         bg-white "
                                 >
                                     <div className='g-0 p-8'>
                                         <a href="#">
-                                            <img
+                                            <Image
                                                 className="w-[100px] h-[60px] rounded-full object-cover hover:scale-110 transition-transform duration-500"
                                                 src={prod.profilePhoto}
+                                                width={800}
+                                                height={300}
                                                 alt={`${prod.name}'s profile`}
                                             />
                                         </a>
                                     </div>
                                     <div className="mb-4">
-                                        <Link className="mb-5 text-2xl hover:text-green-700 font-bold tracking-tight text-rose-700 dark:text-white" href="">
+                                        <Link className="mb-5 text-2xl hover:scale-105 font-bold tracking-tight text-blue-400 dark:text-white" href="">
                                             {prod.name}
                                         </Link>
                                         <Link href={prod.link1}>
-                                            <h1 className="mb-2 text-2xl hover:text-violet-400 font-bold tracking-tight text-gray-900 dark:text-white">
+                                            <h1 className="mb-2 text-2xl font-bold tracking-tight text-black dark:text-white">
                                                 {prod.title1}
                                             </h1>
                                         </Link>
-                                        <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                                        <p className="mb-3 font-normal text-black dark:text-gray-400">
                                             {prod.description1}
                                         </p>
-                                        <Link className='text-sky-500 hover:text-fuchsia-950 font-bold text-lg' href={prod.link1}>
-                                            Read More...
+                                        <Link className='text-blue-400 font-bold text-lg' href={prod.link1}>
+                                            Continue Reading...
                                         </Link>
-                                        <div className='flex flex-row justify-center items-center space-x-8 bg-white p-4 mt-8'>
+                                        <div className='flex flex-row justify-center items-center space-x-8 bg-white p-4 mt-8 hover:shadow-xl transition duration-300'>
                                             <div className='flex items-center space-x-2'>
-                                                <FaBookOpen className='text-rose-700 dark:text-gray-300' />
-                                                <span className='font-medium text-lg text-rose-700 dark:text-gray-300'>
+                                                <FaBookOpen className='text-black dark:text-gray-300' />
+                                                <span className='font-medium text-lg text-black dark:text-gray-300'>
                                                     {prod.reading_time}
                                                 </span>
                                             </div>
                                             <div className='flex items-center space-x-2'>
-                                                <FaCommentAlt className='text-violet-700 dark:text-gray-300' />
-                                                <span className='font-medium text-lg text-violet-700 dark:text-gray-300'>
-                                                    0 comments
+                                                <FaCommentAlt className='text-black dark:text-gray-300' />
+                                                <span className='font-medium text-lg text-black dark:text-gray-300'>
+                                                    {comments[index]} comments
                                                 </span>
                                             </div>
                                         </div>
@@ -114,7 +125,7 @@ const Blog = () => {
                     </div>
                 </div>
                 <div className="flex justify-center mt-8">
-                    <Link href="/load_more" className="bg-[#323232] text-[#DDD0C8] font-semibold py-3 px-6 rounded-lg hover:bg-[#EDE5E1] hover:text-white transition-colors duration-300 text-xl">
+                    <Link href="/load_more" className="bg-black text-white font-semibold py-3 px-6 rounded-lg hover:scale-105 transition-colors duration-300 text-xl">
                         Load More
                     </Link>
                 </div>

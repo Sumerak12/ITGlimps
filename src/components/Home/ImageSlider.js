@@ -62,7 +62,7 @@ export default function ImageSlider() {
                 <h3 className="text-[#323232] text-2xl font-bold mb-4 underline hover:text-blue-700 transition-colors duration-200">
                   {card.title}
                 </h3>
-
+                
                 {/* Separator Line */}
                 <hr className="w-30 border-t-2 border-gray-300 mb-4" />
 

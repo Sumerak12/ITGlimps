@@ -6,6 +6,7 @@ import ImageSlider from '../components/Home/ImageSlider';
 import TeamRoundCards from '../components/Home/TeamCard';
 import Newsletter from '../components/Home/subscription';
 import HeroSection from '../components/Home/HeroSection';
+import AutoSlider from '@/components/Home/blogSlider';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <RecentPost />
       </div>
       <Newsletter />
+      <AutoSlider/>
       <TeamRoundCards />
       <Footer />
     </>

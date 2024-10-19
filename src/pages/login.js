@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -82,19 +83,18 @@ export default function Login() {
             disabled={loading}
             className={`w-full py-3 px-4 rounded-lg transition-all duration-300 ease-in-out ${loading ? 'bg-gray-400' : 'bg-purple-500 hover:bg-purple-600 transform hover:scale-105'} text-white`}
           >
-          
             {loading ? 'Logging in...' : 'Login'}
           </button>
         </form>
         <div className="mt-6 text-center">
           <p className="text-gray-700">
-            Don't have an account?{' '}
-            <a
+            Don&apos;t have an account?{' '}
+            <Link
               href="/signup"
-             className="text-purple-500 hover:text-purple-600 font-medium"
+              className="text-purple-500 hover:text-purple-600 font-medium"
             >
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
       </div>
